@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f3f3f3;
+  color: #222;
+  transition: 0.2s;
+}
+
+.app.dark {
+  background: #202124;
+  color: #eee;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  background: white;
+}
+
+.dark .card {
+  background: #292a2d;
+  border-color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.theme-btn {
+  padding: 7px 13px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dark .theme-btn {
+  color: white;
+  border-color: #777;
+}
+
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-form input {
+  flex: 1;
+}
+
+input,
+select {
+  padding: 9px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: white;
+  color: #222;
+}
+
+.dark input,
+.dark select {
+  background: #333438;
+  color: white;
+  border-color: #666;
+}
+
+.task-form button {
+  padding: 0 16px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.dark .task-form button {
+  background: #3a3b3e;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls select {
+  width: 130px;
+}
+
+.controls input {
+  flex: 1;
+}
+
+.stats {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.dark .stats {
+  border-color: #555;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.task-item label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.task-item input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls select {
+    width: 100%;
+  }
+}
